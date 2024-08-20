@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfiofbm7su02r"]
+
+[ext_resource type="Texture2D" uid="uid://wc2s2efhyv5e" path="res://Background.png" id="1_vlmpt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -30.0
+offset_top = -19.0
+offset_right = 1250.0
+offset_bottom = 781.0
+texture = ExtResource("1_vlmpt")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 859.0
+offset_top = 86.0
+offset_right = 1163.0
+offset_bottom = 203.0
