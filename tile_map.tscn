@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://b100wqc8ojej2"]
+
+[ext_resource type="Texture2D" uid="uid://bprt4p2f2xirn" path="res://vector_style5.png" id="1_po2k8"]
+[ext_resource type="Script" path="res://tile_map.gd" id="2_d46i3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_86qh7"]
+texture = ExtResource("1_po2k8")
+separation = Vector2i(0, 8)
+texture_region_size = Vector2i(32, 30)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+9:1/0 = 0
+8:1/0 = 0
+7:1/0 = 0
+6:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+3:1/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+9:2/0 = 0
+8:2/0 = 0
+7:2/0 = 0
+6:2/0 = 0
+5:2/0 = 0
+4:2/0 = 0
+3:2/0 = 0
+2:2/0 = 0
+1:2/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_sacd5"]
+tile_size = Vector2i(32, 30)
+sources/0 = SubResource("TileSetAtlasSource_86qh7")
+
+[node name="TileMap" type="TileMap"]
+position = Vector2(143, 0)
+tile_set = SubResource("TileSet_sacd5")
+format = 2
+layer_0/name = "hidden"
+layer_1/name = "reveal"
+layer_1/tile_data = PackedInt32Array()
+script = ExtResource("2_d46i3")

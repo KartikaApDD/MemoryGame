@@ -4,7 +4,7 @@ extends Control
 
 @onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/Start_button as Button
 @onready var exit_button = $MarginContainer/HBoxContainer/VBoxContainer/Exit_button as Button
-@onready var start_level = preload("res://node_2d.tscn") as PackedScene
+@onready var start_level = preload("res://tile_map.tscn") as PackedScene
 
 
 func _ready():
