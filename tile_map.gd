@@ -15,7 +15,7 @@ func _ready() -> void:
 	setup_board()
 	update_text()
 	pass # Replace with function body.
-	
+
 func get_tiles_to_use():
 	var chosen_tile_coords = []
 	var options = range(10)
@@ -70,7 +70,6 @@ func when_two_cards_revealed():
 func update_text():
 	$"../CanvasLayer/score_label".text = "Score: %d" % score
 	$"../CanvasLayer/turn_label".text = "Turns Taken: %d" % turns_taken
-
 
 
 func put_back_cards_with_delay():
