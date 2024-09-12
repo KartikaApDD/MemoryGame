@@ -1,5 +1,8 @@
 extends TileMap
 
+@onready var score_label = $"../CanvasLayer/score_label"
+@onready var turn_label = $"../CanvasLayer/turn_label"
+
 var board_size = 4
 enum Layers{hidden,revealed}
 var SOURCE_NUM = 0
@@ -68,9 +71,8 @@ func when_two_cards_revealed():
 	update_text()
 	
 func update_text():
-	$"../CanvasLayer/score_label".text = "Score: %d" % score
-	$"../CanvasLayer/turn_label".text = "Turns Taken: %d" % turns_taken
-
+	score_label.text = "Score: %d" % score
+	turn_label.text = "Turns Taken: %d" % turns_taken
 
 func put_back_cards_with_delay():
 	await self.get_tree().create_timer(1.5).timeout
