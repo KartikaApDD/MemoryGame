@@ -1,4 +1,4 @@
-extends Timer
+extends Node
 
 @onready var label = $Label
 @onready var timer = $Timer
