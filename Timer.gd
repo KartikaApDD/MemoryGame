@@ -13,4 +13,7 @@ func time_left_to_live():
 	return "minute, second"
 
 func _process(delta):
-	label.text = "%02d:%02d" % time_left_to_live()
+	if label:
+		label.text = "%02d:02d%" % time_left_to_live
+	else:
+		print("Warning: Timer is null")

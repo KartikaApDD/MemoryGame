@@ -71,8 +71,15 @@ func when_two_cards_revealed():
 	update_text()
 	
 func update_text():
-	score_label.text = "Score: %d" % score
-	turn_label.text = "Turns Taken: %d" % turns_taken
+	if score_label:
+		score_label.text = "Score: %d" % score
+	else:
+		print("Warning: score_label is null")
+	
+	if turn_label:
+		turn_label.text = "Turns Taken: %d" % turns_taken
+	else:
+		print("Warning: turn_label is null")
 
 func put_back_cards_with_delay():
 	await self.get_tree().create_timer(1.5).timeout

@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhl3syf7y1r5s"]
+[gd_scene load_steps=6 format=3 uid="uid://dhl3syf7y1r5s"]
 
 [ext_resource type="PackedScene" uid="uid://b100wqc8ojej2" path="res://tile_map.tscn" id="1_7vjub"]
 [ext_resource type="Script" path="res://Timer.gd" id="2_erxyl"]
+
+[sub_resource type="SystemFont" id="SystemFont_37dg1"]
+font_names = PackedStringArray("Stencil")
+
+[sub_resource type="SystemFont" id="SystemFont_fovkn"]
+font_names = PackedStringArray("Broadway")
+
+[sub_resource type="SystemFont" id="SystemFont_hoy1l"]
+font_names = PackedStringArray("Broadway")
 
 [node name="main" type="Node2D"]
 
@@ -28,6 +37,7 @@ offset_right = 80.0
 offset_bottom = 242.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_37dg1")
 theme_override_font_sizes/font_size = 50
 text = "00:00"
 
@@ -48,6 +58,8 @@ offset_top = -59.0
 offset_bottom = 28.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.612903, 0.740409, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_fovkn")
 theme_override_font_sizes/font_size = 40
 text = "Score:"
 
@@ -63,5 +75,7 @@ offset_right = -2.0
 offset_bottom = 114.0
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.638753, 0.758185, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_hoy1l")
 theme_override_font_sizes/font_size = 40
 text = "Turns taken: "
