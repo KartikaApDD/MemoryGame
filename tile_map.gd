@@ -17,7 +17,7 @@ var turns_taken = 0
 func _ready() -> void:
 	setup_board()
 	update_text()
-	pass # Replace with function body.
+	pass
 
 func get_tiles_to_use():
 	var chosen_tile_coords = []
