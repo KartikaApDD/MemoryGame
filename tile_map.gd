@@ -49,7 +49,7 @@ func place_single_face_down_card(coords: Vector2):
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
-			var global_clicked = event.position
+			var global_clicked = event.position 
 			var pos_clicked = Vector2(local_to_map(to_local(global_clicked)))
 			print(pos_clicked)
 			var current_tile_alt = get_cell_alternative_tile(Layers.hidden, pos_clicked)
@@ -90,3 +90,7 @@ func put_back_cards_with_delay():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_exit_pressed():
+	get_tree().quit() 
