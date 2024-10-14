@@ -7,7 +7,7 @@ var board_size = 4
 enum Layers{hidden,revealed}
 var SOURCE_NUM = 0
 const hidden_tile_coords = Vector2(6,2)
-const hidden_tile_alt = 1
+const hidden_tile_alt = 3
 var revealed_spots = []
 var tile_pos_to_atlas_pos = {}
 var score = 0
@@ -52,7 +52,7 @@ func _input(event):
 			var pos_clicked = Vector2(local_to_map(to_local(global_clicked)))
 			print(pos_clicked)
 			var current_tile_alt = get_cell_alternative_tile(Layers.hidden, pos_clicked)
-			if current_tile_alt == 1 and revealed_spots.size() < 2:
+			if current_tile_alt == 3 and revealed_spots.size() < 2:
 				self.set_cell(Layers.hidden, pos_clicked, -1)
 				revealed_spots.append(pos_clicked)
 				if revealed_spots.size() == 2:

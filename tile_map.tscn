@@ -54,6 +54,6 @@ tile_set = SubResource("TileSet_sacd5")
 format = 2
 layer_0/name = "hidden"
 layer_0/z_index = 5
-layer_1/name = "reveal"
+layer_1/name = "revealed"
 layer_1/tile_data = PackedInt32Array()
 script = ExtResource("2_d46i3")
