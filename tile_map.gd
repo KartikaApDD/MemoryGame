@@ -1,13 +1,13 @@
 extends TileMap
 
-@onready var score_label = $"../CanvasLayer/score_label"
-@onready var turn_label = $"../CanvasLayer/turn_label"
+@onready var score_label = get_node("../CanvasLayer/score_label")
+@onready var turn_label = get_node("../CanvasLayer/turn_label")
 
 var board_size = 4
 enum Layers{hidden,revealed}
 var SOURCE_NUM = 0
-const hidden_tile_coords = Vector2(6,2)
-const hidden_tile_alt = 3
+const hidden_tile_coords = Vector2(7,1)
+const hidden_tile_alt = 1
 var revealed_spots = []
 var tile_pos_to_atlas_pos = {}
 var score = 0
@@ -52,7 +52,7 @@ func _input(event):
 			var pos_clicked = Vector2(local_to_map(to_local(global_clicked)))
 			print(pos_clicked)
 			var current_tile_alt = get_cell_alternative_tile(Layers.hidden, pos_clicked)
-			if current_tile_alt == 3 and revealed_spots.size() < 2:
+			if current_tile_alt == 1 and revealed_spots.size() < 2:
 				self.set_cell(Layers.hidden, pos_clicked, -1)
 				revealed_spots.append(pos_clicked)
 				if revealed_spots.size() == 2:
@@ -81,7 +81,7 @@ func update_text():
 		print("Warning: turn_label is null")
 
 func put_back_cards_with_delay():
-	await self.get_tree().create_timer(1.5).timeout
+	await self.get_tree().create_timer(0.3).timeout
 	for spot in revealed_spots:
 		place_single_face_down_card(spot)
 	revealed_spots.clear()

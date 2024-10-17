@@ -4,14 +4,14 @@
 [ext_resource type="Script" path="res://Timer.gd" id="2_erxyl"]
 [ext_resource type="Script" path="res://exit.gd" id="3_qoypo"]
 
-[sub_resource type="SystemFont" id="SystemFont_37dg1"]
-font_names = PackedStringArray("Stencil")
-
 [sub_resource type="SystemFont" id="SystemFont_fovkn"]
 font_names = PackedStringArray("Broadway")
 
 [sub_resource type="SystemFont" id="SystemFont_hoy1l"]
 font_names = PackedStringArray("Broadway")
+
+[sub_resource type="SystemFont" id="SystemFont_37dg1"]
+font_names = PackedStringArray("Stencil")
 
 [node name="main" type="Node2D"]
 
@@ -22,29 +22,6 @@ position = Vector2(578, 325)
 modulate = Color(0.992157, 1, 1, 1)
 position = Vector2(80, 62)
 scale = Vector2(4.4, 4.4)
-
-[node name="Timer" type="Node" parent="."]
-script = ExtResource("2_erxyl")
-
-[node name="Label" type="Label" parent="Timer"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -73.0
-offset_top = 173.0
-offset_right = 80.0
-offset_bottom = 242.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = SubResource("SystemFont_37dg1")
-theme_override_font_sizes/font_size = 50
-text = "00:00"
-
-[node name="Timer" type="Timer" parent="Timer"]
-wait_time = 120.0
-one_shot = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -80,6 +57,29 @@ theme_override_colors/font_color = Color(0.638753, 0.758185, 1, 1)
 theme_override_fonts/font = SubResource("SystemFont_hoy1l")
 theme_override_font_sizes/font_size = 40
 text = "Turns taken: "
+
+[node name="Timer" type="Node" parent="."]
+script = ExtResource("2_erxyl")
+
+[node name="Label" type="Label" parent="Timer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = 173.0
+offset_right = 80.0
+offset_bottom = 242.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("SystemFont_37dg1")
+theme_override_font_sizes/font_size = 50
+text = "00:00"
+
+[node name="Timer" type="Timer" parent="Timer"]
+wait_time = 120.0
+one_shot = true
 
 [node name="exit" type="Button" parent="."]
 offset_left = 22.0
